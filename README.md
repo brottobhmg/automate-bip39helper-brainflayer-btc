@@ -22,7 +22,7 @@ git clone https://github.com/brottobhmg/automate-bip39helper-brainflayer-btc.git
 cd automate-bip39helper-brainflayer-btc ;
 mkdir foundkeys ;
 
-#wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
+wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
 
 mkdir Bip39Helper ;
 cd Bip39Helper ;
@@ -43,5 +43,8 @@ Start the script run.sh
 
 # Configuration
 If you want run more in parallel, modify the **4** on _for_ lines
+
+# Future implementation
+- Compile also on aarch64 like Raspberry PI 4B
 
 
