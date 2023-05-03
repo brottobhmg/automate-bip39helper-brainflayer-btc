@@ -1,4 +1,5 @@
 #!/bin/bash
+readonly BASE_PATH=$HOME/automate-bip39helper-brainflayer-btc
 
 trap ctrl_c INT
 function ctrl_c() {
@@ -11,9 +12,9 @@ function ctrl_c() {
 function check_found(){
 	for i in {0..4}
 	do
-		cat /home/ubuntu/btc_crack/foundkeys/foundkeys$i.txt >> /home/ubuntu/btc_crack/foundkeys/foundkeysALL.txt
+		cat $BASE_PATH/foundkeys/foundkeys$i.txt >> $BASE_PATH/foundkeys/foundkeysALL.txt
 	done
-	if [ -s /home/ubuntu/btc_crack/foundkeys/foundkeysALL.txt ] 
+	if [ -s $BASE_PATH/foundkeys/foundkeysALL.txt ] 
 	then
 		echo "filename exists and is > 0 bytes"
 		echo "FOUND SOMETHING, FOUND SOMETHING"
@@ -26,15 +27,11 @@ function check_found(){
 
 echo " **************** Program START **************** "
 
-
-cd /home/ubuntu/btc_crack/ ;
-mkdir foundkeys ;
-
 echo Starting the finder
 for i in {0..4}
 do
-	> /home/ubuntu/btc_crack/foundkeys/foundkeys$i.txt
-	/home/ubuntu/btc_crack/Bip39Helper/bip39helper -l 12 | /home/ubuntu/btc_crack/brainflayer/brainflayer -v -b /home/ubuntu/btc_crack/address.blf -o /home/ubuntu/btc_crack/foundkeys/foundkeys$i.txt & #&>/dev/null &
+	> $BASE_PATH/foundkeys/foundkeys$i.txt
+	$BASE_PATH/Bip39Helper/bip39helper -l 12 | $BASE_PATH/brainflayer/brainflayer -v -b $BASE_PATH/address.blf -o $BASE_PATH/foundkeys/foundkeys$i.txt & #&>/dev/null &
 done
 echo All finder started
 
@@ -44,7 +41,6 @@ do
 	check_found
 done
 
-#/home/ubuntu/btc_crack/Bip39Helper0/bip39helper | /home/ubuntu/btc_crack/brainflayer0/brainflayer -v -b /home/ubuntu/btc_crack/address0.blf -o /home/ubuntu/btcCrack/brainflayer0/foundkeys.txt &
 
 
 
