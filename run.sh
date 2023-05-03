@@ -1,4 +1,5 @@
 #!/bin/bash
+
 readonly BASE_PATH=$HOME/automate-bip39helper-brainflayer-btc
 
 trap ctrl_c INT

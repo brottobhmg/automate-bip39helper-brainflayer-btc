@@ -1,5 +1,3 @@
-#inserire in /home/ubuntu/btc_crack/ il file address.txt con tutti gli indirizzi btc da confrontare
-
 sudo apt-get install openssl libgmp3-dev libimobiledevice-dev libplist-dev libusbmuxd-dev libssl-dev zlib1g-dev dh-autoreconf python2.7-dev ;
 
 cd $HOME ;
@@ -7,7 +5,7 @@ git clone https://github.com/brottobhmg/automate-bip39helper-brainflayer-btc.git
 cd automate-bip39helper-brainflayer-btc ;
 mkdir foundkeys ;
 
-wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
+#wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
 
 mkdir Bip39Helper ;
 cd Bip39Helper ;
