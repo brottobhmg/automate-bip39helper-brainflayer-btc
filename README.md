@@ -44,4 +44,7 @@ Start the script run.sh
 # Configuration
 If you want run more in parallel, modify the **4** on _for_ lines
 
+# Future implementation
+- Compile also on aarch64 like Raspberry PI 4B
+
 
