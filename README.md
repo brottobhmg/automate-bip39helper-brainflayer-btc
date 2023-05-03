@@ -22,7 +22,7 @@ git clone https://github.com/brottobhmg/automate-bip39helper-brainflayer-btc.git
 cd automate-bip39helper-brainflayer-btc ;
 mkdir foundkeys ;
 
-#wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
+wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
 
 mkdir Bip39Helper ;
 cd Bip39Helper ;
