@@ -1,0 +1,2 @@
+#on x86_x64 pc
+sudo apt install gcc-9-aarch64-linux-gnu ;

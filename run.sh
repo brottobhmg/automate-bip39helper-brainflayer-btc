@@ -25,11 +25,15 @@ function check_found(){
 }
 
 echo " **************** Program START **************** "
-echo $(date +"%r")
+
+
+cd /home/ubuntu/btc_crack/ ;
+mkdir foundkeys ;
 
 echo Starting the finder
 for i in {0..4}
 do
+	> /home/ubuntu/btc_crack/foundkeys/foundkeys$i.txt
 	/home/ubuntu/btc_crack/Bip39Helper/bip39helper -l 12 | /home/ubuntu/btc_crack/brainflayer/brainflayer -v -b /home/ubuntu/btc_crack/address.blf -o /home/ubuntu/btc_crack/foundkeys/foundkeys$i.txt & #&>/dev/null &
 done
 echo All finder started
