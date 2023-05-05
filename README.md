@@ -16,7 +16,7 @@ Copy all the commands and paste into terminal:
 - Create the needed .blf file from downloaded address.txt
 ```
 sudo apt update && sudo apt full-upgrade -y
-sudo apt-get install gcc make openssl libgmp3-dev libimobiledevice-dev libplist-dev libusbmuxd-dev libssl-dev zlib1g-dev dh-autoreconf python2.7-dev ;
+sudo apt-get install wget git gcc make openssl libgmp3-dev libimobiledevice-dev libplist-dev libusbmuxd-dev libssl-dev zlib1g-dev dh-autoreconf python2.7-dev ;
 
 cd $HOME ;
 git clone https://github.com/brottobhmg/automate-bip39helper-brainflayer-btc.git ;
