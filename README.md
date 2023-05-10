@@ -43,6 +43,8 @@ bash run.sh
 ```
 If you want small dataset of addresses (around 9kk, with balances at start 2023 greater then 250$)
 
+Link: ```https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt```
+
 # Run
 Start the script run.sh
 
