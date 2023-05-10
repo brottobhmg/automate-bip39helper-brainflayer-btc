@@ -23,7 +23,7 @@ git clone https://github.com/brottobhmg/automate-bip39helper-brainflayer-btc.git
 cd automate-bip39helper-brainflayer-btc ;
 mkdir foundkeys ;
 
-wget https://www.dropbox.com/s/cotkuh1qdc1slil/address.txt ;
+wget https://www.dropbox.com/s/bhn5x3mjn9qs3xe/all_funded_addresses.txt ;
 
 mkdir Bip39Helper ;
 cd Bip39Helper ;
@@ -36,11 +36,12 @@ wget https://raw.githubusercontent.com/TheRealLordFractal/Bip39Helper/1.02a/word
 git clone https://github.com/ryancdotorg/brainflayer.git ;
 cd brainflayer ;
 make ;
-./hex2blf $HOME/automate-bip39helper-brainflayer-btc/address.txt $HOME/automate-bip39helper-brainflayer-btc/address.blf ;
+./hex2blf $HOME/automate-bip39helper-brainflayer-btc/all_funded_addresses.txt $HOME/automate-bip39helper-brainflayer-btc/address.blf ;
 cd ../
 
 bash run.sh
 ```
+If you want small dataset of addresses (around 9kk, with balances at start 2023 greater then 250$)
 
 # Run
 Start the script run.sh
