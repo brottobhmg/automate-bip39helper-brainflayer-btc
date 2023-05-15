@@ -9,7 +9,7 @@ Tested on Ubuntu 20.04.6 LTS
 Copy all the commands and paste into terminal:
 - Install all of needed package
 - Clone this repo
-- Download the address.txt file that contains all wallet address from 2023 that have balance > 250$
+- Download the address.txt file that contains all wallet address from 2023 that have balance > 25$
 - Download already build file from Bip39Helper
 - Clone the Brainflayer repo
 - Compile it
@@ -24,7 +24,8 @@ git clone https://github.com/brottobhmg/automate-bip39helper-brainflayer-btc.git
 cd automate-bip39helper-brainflayer-btc ;
 mkdir foundkeys ;
 
-wget https://www.dropbox.com/s/bhn5x3mjn9qs3xe/all_funded_addresses.txt ;
+wget https://www.dropbox.com/s/aq5arzqvs32834w/rich_to_25usd.txt ;
+mv rich_to_25usd.txt address.txt ;
 
 mkdir Bip39Helper ;
 cd Bip39Helper ;
@@ -37,7 +38,7 @@ wget https://raw.githubusercontent.com/TheRealLordFractal/Bip39Helper/1.02a/word
 git clone https://github.com/ryancdotorg/brainflayer.git ;
 cd brainflayer ;
 make ;
-./hex2blf $HOME/automate-bip39helper-brainflayer-btc/all_funded_addresses.txt $HOME/automate-bip39helper-brainflayer-btc/address.blf ;
+./hex2blf $HOME/automate-bip39helper-brainflayer-btc/address.txt $HOME/automate-bip39helper-brainflayer-btc/address.blf ;
 cd ../
 
 bash run.sh
